@@ -1,0 +1,6 @@
+Framework: React Native Expo
+Language: Javascript
+
+Summary of the objective: Enable ability to add tasks, delete tasks, and mark tasks complete. Ensure that users can modify tasks simultaneously and can sync tasks when offline.
+
+Approach: I am going to keep it simple. I will save a object that has attributes 'complete' and 'text'. The 'text' field will serve as a unique id. I will then serialize the objects into a database that has local persistence capabilities. 
