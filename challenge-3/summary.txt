@@ -1,0 +1,8 @@
+Summary of challenge-3:
+
+I managed to use the React-Native Expo framework to add most of the functionality that was requested.
+
+I completed:
+
+- Ability to add, delete, and mark tasks complete
+- Nice looking 

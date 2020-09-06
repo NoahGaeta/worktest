@@ -7,7 +7,7 @@ import Reinput from "reinput";
 import Task from "./src/components/Task";
 import Header from "./src/components/Header";
 import { AntDesign } from "@expo/vector-icons";
-import firebasedb from "./firebase"; // This contains my api key, I have to leave this file out of the repo for now
+import firebasedb from "./firebase";
 
 class TaskObj {
   constructor(inputText, complete) {
@@ -89,6 +89,8 @@ export default class App extends Component {
     const exists = this.check_task_exists(currentText);
     if (exists) {
       alert("Task already exists!");
+    } else if(currentText === ""){
+      alert("Enter a task!");
     } else {
       let newTask = new TaskObj(currentText, false);
       tasks.push(newTask);

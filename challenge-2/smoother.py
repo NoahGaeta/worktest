@@ -1,21 +1,14 @@
 """
 Program that smooths boundary data
 Author: Noah Gaeta
-
----- Windows Instructions ----
-I recommend using a virtual environment to keep your environment safe from version changes.
-If you decide to do so run 'python -m virtualenv venv' then after run '.\venv\scripts\activate.bat'
-If you do not have virtualenv run 'python -m pip install virtualenv'
-Regardless of your choice run 'python -m pip install -r requirements.txt'
-Finally to run the script run 'python smoother.py'
 """
 import re
 import numpy
 from pykml import parser
 import matplotlib.pyplot as plt
 
-REGION_FILE_PATH = '../region.kml'
-SAVE_PATH = '../region_no_outliers.kml'  # lets not over write the file just in case
+REGION_FILE_PATH = './region.kml'
+SAVE_PATH = './region_no_outliers.kml'  # lets not over write the file just in case
 
 
 def main():

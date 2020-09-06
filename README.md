@@ -42,11 +42,11 @@ in inches of the movable part of the sensor and is the independent variable.
 straight and increases as the wheels turn to the left and decreases as the
 wheels turn to the right. The value of `θ` should be reported in radians.
 
-![diagram.png](diagram.png)
+![diagram.png](./challenge-1/diagram.png)
 
-![left.png](left.png)
+![left.png](./challenge-1/left.png)
 
-![right.png](right.png)
+![right.png](./challenge-1/right.png)
 
 Identify any potential problems (any type mechanical or software) with this
 setup and brainstorm possible solutions.
