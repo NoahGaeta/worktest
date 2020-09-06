@@ -5,9 +5,7 @@ Author: Noah Gaeta
 import re
 import numpy
 from pykml import parser
-from lxml import etree as et
 import matplotlib.pyplot as plt
-from itertools import chain
 
 REGION_FILE_PATH = '../region.kml'
 SAVE_PATH = '../region_no_outliers.kml'  # lets not over write the file just in case
