@@ -21,6 +21,5 @@ I completed:
 - Ability to continue using application after network is offline, granted that the user has internet on the initial load of the app.(B4)
 - When network is offline and a user makes changes, those changes will be pushed when the network goes back online.(B5)
 - Syncing between devices, uses an external server for hosting and any number of devices can use it.(B2)
+- Given two devices, device A & B, if device A modifies something in the database, device B will load that change instantly.(B3)
 
-What doesn't work:
-- Given two devices, device A & B, if device A modifies something in the database, device B won't see that change until a reload of the app occurs.(B3)

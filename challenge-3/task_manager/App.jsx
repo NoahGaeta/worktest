@@ -51,7 +51,20 @@ export default class App extends Component {
       });
 
       this.setState({ tasks: taskList });
+
+      this.listen_for_change();
     }
+  }
+
+  async listen_for_change() {
+    this.db.collection("tasks").onSnapshot((snapshot) => {
+      let taskList = [];
+      snapshot.docs.forEach((doc) => {
+        let task = new TaskObj(doc.id, doc.data()["complete"]);
+        taskList.push(task);
+      });
+      this.setState({ tasks: taskList });
+    });
   }
 
   toggle_task() {
@@ -89,7 +102,7 @@ export default class App extends Component {
     const exists = this.check_task_exists(currentText);
     if (exists) {
       alert("Task already exists!");
-    } else if(currentText === ""){
+    } else if (currentText === "") {
       alert("Enter a task!");
     } else {
       let newTask = new TaskObj(currentText, false);
@@ -102,6 +115,7 @@ export default class App extends Component {
 
   check_task_exists(text) {
     const tasks = this.state.tasks;
+    let task;
     for (task of tasks) {
       if (task.inputText === text) {
         return true;
