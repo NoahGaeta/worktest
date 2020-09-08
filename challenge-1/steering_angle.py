@@ -7,7 +7,7 @@ import math
 from sys import argv
 
 A = 5
-B = math.sqrt(113)  # found manually using distance formula
+B = math.sqrt(113)  # found manually using py theory
 INIT_THETA = math.atan(7 / 8)  # initial theta value at '0'
 
 
